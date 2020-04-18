@@ -1,0 +1,14 @@
+spring:
+  application:
+     name: demo-producer    #工程名(在注册中心的页面看到的名字)
+server:
+  port: 9991  #端口号
+
+eureka:
+  client:
+    register-with-eureka: true  #是否注册(服务的提供者是需要注册到注册中心的) 默认就是true
+    fetch-registry: true   #是否获取注册信息
+    service-url:
+      defaultZone: http://localhost:9990/eureka/  #这里和注册中心的一样就能注册到注册中心
+  instance:
+     prefer-ip-address: true

@@ -1,15 +1,15 @@
 spring:
   application:
-    name: demo-eureka    #工程名(在注册中心的页面看到的名字)
+    name: eureka
 server:
-  port: 9990  #端口号
+  port: 9990
 
 eureka:
   client:
-    register-with-eureka: false  #是否注册(eureka本身就是注册中心所以自己就不注册了)
-    fetch-registry: false   #是否获取注册信息
+    register-with-eureka: false
+    fetch-registry: false #是否获取注册信息
     service-url:
-      defaultZone: http://localhost:9990/eureka/  #其他项目注册时使用这个
+      defaultZone: http://localhost:9990/eureka/ #其他项目注册时使用这个
   instance:
     prefer-ip-address: true
   server:
