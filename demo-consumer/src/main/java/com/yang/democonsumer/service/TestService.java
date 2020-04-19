@@ -1,6 +1,8 @@
 package com.yang.democonsumer.service;
 
+import com.yang.common.entity.User;
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -8,5 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface TestService {
 
     @RequestMapping("produceCenter/test")
-    public String hello(@RequestParam("name") String name);
+    String hello(@RequestParam("name") String name);
+
+    @RequestMapping("produceCenter/testAddUser")
+    String addUser(@RequestBody User user);
 }

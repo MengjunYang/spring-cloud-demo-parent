@@ -18,6 +18,12 @@
     </properties>
 
     <dependencies>
+        <!--项目的公共包-->
+        <dependency>
+            <groupId>com.yang</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <!--SpringCloud依赖注册+发现 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
